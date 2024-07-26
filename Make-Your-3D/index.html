@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"></script>
+  <title>Make-Your-3D: Fast and Consistent Subject-Driven 3D Content Generation</title>
+  
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script> -->
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Make-Your-3D: Fast and Consistent Subject-Driven 3D Content Generation</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://liuff19.github.io/">Fangfu Liu</a>,</span>
+            <span class="author-block">
+              <a href="https://hanyang-21.github.io/">Hanyang Wang</a>,</span>
+            <span class="author-block">
+              Weiliang Chen,</span>
+            <span class="author-block">
+              <a href="https://github.com/sunboy0617">Haowen Sun</a>,</span>
+            <span class="author-block">
+            <span class="author-block">
+              <a href="https://duanyueqi.github.io/">Yueqi Duan</a>
+            </span>
+          </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Tsinghua University</span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span style="font-weight: bold;">ECCV 2024</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="./static/pdfs/Make-Your-3D.pdf" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2403.09625"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://liuff19.github.io/Make-Your-3D"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-powerpoint"></i>
+                  </span>
+                  <span>Slides</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://github.com/liuff19/Make-Your-3D"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" autoplay controls loop playsinline height="100%">
+        <source src="static/myvideos/supp-video.mp4" type="video/mp4" />
+      </video>
+      <h2 class="subtitle has-text-justified">
+        <b>Make-Your-3D</b> is a new subject-driven 3D generation framework that can personalize your 3D assets from only a wild image.
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Recent years have witnessed the strong power of 3D generation models, which offer a new level of creative flexibility by allowing users to guide the 3D content generation process through a single image 
+            or natural language. However, it remains challenging for existing 3D generation methods to create subject-driven 3D content across diverse prompts. In this paper, we introduce a novel 3D customization 
+            method, dubbed <b>Make-Your-3D</b> that can personalize high-fidelity and consistent 3D content from only a single image of a subject with text description within 5 minutes. Our key insight is to 
+            harmonize the distributions of a multi-view diffusion model and an identity-specific 2D generative model, aligning them with the distribution of the desired 3D subject. Specifically, we design a co- 
+            evolution framework to reduce the variance of distributions, where each model undergoes a process of learning from the other through identity-aware optimization and subject-prior optimization, 
+            respectively. Extensive experiments demonstrate that our method can produce high-quality, consistent, and subject-specific 3D content with text-driven modifications that are unseen in subject image. 
+          </p>
+        </div>
+        <img src="./static/figs/teaser-3d.png">
+        <div class="content has-text-justified">
+        <p>
+          Figure 1. <b>Make-Your-3D</b> can personalize 3D contents from only a single image of a subject with text-driven modifications within only 5 minutes, which is <b>36 x faster</b> than DreamBooth3D.
+        </p>
+        </div>
+      </div>
+    </div>
+
+
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <!-- <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div> -->
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+<!-- <hr>
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <h2 class="title is-3">Subject-Driven 3D Generation</h2>
+      <p></p>
+    </div>
+
+    <div class="hero-body">
+      <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./static/myvideos/video2.mp4"
+                type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+          Sherpa3D is a new text-to-3D framework that can generate high fidelity, 
+          diverse, and 3D-consistent results within 25 minutes.
+      </h2>
+    </div>
+
+  </div>
+</section>
+
+</section> -->
+
+<hr>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Subject-Driven 3D generation</h2>
+        <div class="content has-text-justified">
+          <p>
+            <b>Visual results of Make-Your-3D</b> on different subjects with customized text inputs. The multi-view results demonstrate that our method can generate 3D assets with high-fidelity, 3D consistency, 
+            subject preservation, and faithfulness to the text prompts.
+        </p>        
+        </div>
+        <img src="./static/figs/More-results.png">
+        <div class="content has-text-justified">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3"> "Gelute" Personalization</h2>
+        <div class="content has-text-justified">
+          <p>
+            Textured meshes and normal maps on a <b>subject "Gelute"</b> with various
+            customized text inputs.
+        </p>        
+        </div>
+        <img src="./static/figs/subject-grute.png">
+        <div class="content has-text-justified">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Qualitative Comparison</h2>
+        <div class="content has-text-justified">
+          <p>
+            <b>The qualitative comparisons with DreamBooth3D.</b> We use the same text prompt and only one of the input images as in DreamBooth3D. Notice ours perform better on the object details with less input images.
+        </p>        
+        </div>
+        <img src="./static/figs/comparison.png">
+        <div class="content has-text-justified">
+        </div>
+        <hr>
+        <div class="content has-text-justified">
+          <p>
+            <b>Comparisons with the failure cases in DreamBooth3D</b>. As Dreambooth3D fails to reconstruct thin object structures like sunglasses and suffers from limited view 
+               variation, Our method has made significant improvements in fine details of thin objects and fast 3D personalization from a single subject image.
+        </p>        
+        </div>
+        <img src="./static/figs/failure-case.png">
+        <div class="content has-text-justified">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Method</h2>
+        <div class="content has-text-justified">
+          <p>
+            <b>The overall framework of our proposed Make-Your-3D.</b> Our framework includes identity-aware optimization of 2D personalized model and subject-prior optimization of multi-view diffusion model to  
+            approximate subject distribution. The identity-aware optimization lifts input image to 3D space through a frozen multi-view diffusion model and optimizes the 2D 
+            personalized model via multi-views. The subject-prior optimization adopts diverse images from frozen personalized model to infuse the subject-specific prior into 
+            the multi-view diffusion model.
+        </p>        
+        </div>
+        <img src="./static/figs/pipeline-my3d.png">
+        <div class="content has-text-justified">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{liu2024make,
+      title={Make-Your-3D: Fast and Consistent Subject-Driven 3D Content Generation},
+      author={Liu, Fangfu and Wang, Hanyang and Chen, Weiliang and Sun, Haowen and Duan, Yueqi},
+      journal={arXiv preprint arXiv:2403.09625},
+      year={2024}
+    }
+</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>This website is constructed using the source code provided by <a
+            href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>, and we are grateful for their template.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
