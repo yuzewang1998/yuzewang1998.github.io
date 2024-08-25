@@ -55,10 +55,10 @@
               <b>2024-07:</b> One paper on 3D Perception is accepted by <a href="https://2024.acmmm.org/">ACMMM 2024</a>.
               </li>
               <li style="margin: 5px;" >
-                <b>2023-04:</b> One paper on 3D Editing is accepted by <a href="https://cvpr.thecvf.com/">ICMR 2023</a>.
+                <b>2023-04:</b> One paper on 3D Editing is accepted by <a href="#">ICMR 2023</a>.
               </li>
               <li style="margin: 5px;" >
-                <b>2022-11:</b> One paper on 3D Perception And Reconstruction is accepted by <a href="https://cvpr.thecvf.com/">ICME 2023</a>.
+                <b>2023-01:</b> One paper on 3D Perception And Reconstruction is accepted by <a href="#">ICME 2023</a>.
               </li>
             </p>
           </td>
@@ -95,11 +95,64 @@
               <br>
               <em>ACMMM, 2024</em>
               <br>
+              <a href="https://quyans.github.io/GOI-Hyperplane/">[Project Page]</a>
               <a href="https://arxiv.org/abs/2406.04338">[arXiv]</a>
-              <a href="https://quyans.github.io/GOI-Hyperplane/">[Code]</a>
-              <a href="https://github.com/Quyans/GOI-Hyperplane">[Project Page]</a> 
+              <a href="https://github.com/Quyans/GOI-Hyperplane/">[Code]</a>
               <br>
               <p> In this paper, we propose GOI, a novel method for 3D open-vocabulary scene understanding. Our approach includes an efficient compression method that utilizes scene priors to condense noisy high-dimensional semantic features into compact low-dimensional vectors, which are subsequently embedded in 3DGS. And we leverage an off-the-shelf 2D Referring Expression Segmentation (RES) model to fine-tune the semantic-space hyperplane, enabling a more precise distinction between target regions and others. </p>
+            </td>
+          </tr>
+
+          <tr>
+            <td colspan="2" style="padding-bottom: 15px;">
+                <div style="border-bottom: 2px solid #ccc; width: 100%;"></div>
+            </td>
+          </tr>
+
+          <tr>
+            <td style="padding:20px;width:30%;max-width:30%" align="center">
+              <img style="width:100%;max-width:100%" src="images/sgnerf2.png" alt="dise">
+            </td>
+            <td width="75%" valign="center">
+              <papertitle>SG-NeRF: Semantic-guided Point-based Neural Radiance Fields</papertitle>
+              <br>
+              <strong>Yansong Qu*</strong>, 
+              <a href="https://scholar.google.com.hk/citations?user=V_5VPiEAAAAJ&hl=zh-CN&oi=sra">Yuze Wang*</a>,  
+              <a href="https://scholar.google.com.hk/citations?hl=zh-CN&user=Q-UkdjUAAAAJ">Yue Qi </a>, 
+              <br>
+              <em>ICME, 2023</em>
+              <br>
+              <a href="https://ieeexplore.ieee.org/abstract/document/10219715">[Paper]</a>
+              <a href="https://github.com/Quyans/SG-NeRF">[Code]</a>
+              <br>
+              <p> Neural Radiance Fields (NeRF) require a large number of high-quality images to achieve novel view synthesis in room-scale scenes, but capturing these images is very labor-intensive. To address this, we propose Semantic-Guided Point-Based NeRF (SG-NeRF), which can reconstruct the radiance field using only a few images. We leverage sparse 3D point clouds with neural features as geometry constraints for NeRF optimization and use semantic predictions from both 2D images and 3D point clouds to guide the search for neighboring neural points during ray marching. This semantic guidance allows the sampled points to accurately find structurally related points even in large areas with unevenly distributed sparse point clouds, enabling high-quality rendering with fewer input images. </p>
+            </td>
+          </tr>
+          
+          <tr>
+            <td colspan="2" style="padding-bottom: 15px;">
+                <div style="border-bottom: 2px solid #ccc; width: 100%;"></div>
+            </td>
+          </tr>
+
+          <tr>
+            <td style="padding:20px;width:30%;max-width:30%" align="center">
+              <img style="width:100%;max-width:100%" src="images/ripnerf.png" alt="dise">
+            </td>
+            <td width="75%" valign="center">
+              <papertitle>RIP-NeRF: Learning Rotation-Invariant Point-based Neural
+                Radiance Field for Fine-grained Editing and Compositing</papertitle>
+              <br>
+              <a href="https://scholar.google.com.hk/citations?user=V_5VPiEAAAAJ&hl=zh-CN&oi=sra">Yuze Wang</a>, 
+              Junyi Wang, 
+              <strong>Yansong Qu</strong>, 
+              <a href="https://scholar.google.com.hk/citations?hl=zh-CN&user=Q-UkdjUAAAAJ">Yue Qi </a>, 
+              <br>
+              <em>ICMR, 2023</em>
+              <br>
+              <a href="https://dl.acm.org/doi/abs/10.1145/3591106.3592276">[Paper]</a>
+              <br>
+              <p>In this work, we introduce Rotation-Invariant Point-based NeRF (RIP-NeRF), combining the strengths of implicit NeRF-based and explicit point-based representations for fine-grained editing and cross-scene compositing of radiance fields. We replace the traditional Cartesian coordinates with a novel rotation-invariant point-based radiance field representation, using a Neural Inverse Distance Weighting Interpolation (NIDWI) module to enhance rendering quality. For cross-scene compositing, we disentangle the rendering module from the neural point-based representation, allowing controllable compositing across scenes without the need for retraining.</p>
             </td>
           </tr>
 
@@ -145,8 +198,6 @@
           </td>
         </tr>
       </tbody></table>
-
-
 
 
       <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
