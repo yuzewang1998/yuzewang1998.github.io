@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-55V1E709SK"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-55V1E709SK');
+  </script>
+
+  <meta charset="utf-8">
+  <meta name="description" content="Taking Language Embedded 3D Gaussian Splatting into the Wild ">
+  <meta name="keywords"
+    content="WE-GS, Gaussian Splatting, Gaussian, in the wild, unconstrained photo collection, Language Embedded 3DGS, LangSplat, LEGaussians">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Taking Language Embedded 3D Gaussian Splatting into the Wild
+  </title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <script src="./static/js/script.js"></script>
+</head>
+
+<body>
+
+  <!-- <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      <div class="navbar-menu">
+        <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+          <a class="navbar-item" href="">
+          <span class="icon">
+              <i class="fas fa-home"></i>
+          </span>
+          </a>
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">
+              More Research
+            </a>
+            <div class="navbar-dropdown">
+              <a class="navbar-item" href="https://hypernerf.github.io">
+                HyperNeRF
+              </a>
+              <a class="navbar-item" href="https://nerfies.github.io">
+                Nerfies
+              </a>
+              <a class="navbar-item" href="https://latentfusion.github.io">
+                LatentFusion
+              </a>
+              <a class="navbar-item" href="https://photoshape.github.io">
+                PhotoShape
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav> -->
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">
+              <span style="color: #606475 ;font-weight: bolder;">Taking Language Embedded 3D Gaussian Splatting into the
+                Wild</span>
+            </h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://yuzewang1998.github.io/"
+                  style="font-family: 'Times New Roman', Times, serif;font-size: 24px;">Yuze Wang</a><sup>1</sup>,
+                <a href="https://junyiwang.github.io/"
+                  style="font-family: 'Times New Roman', Times, serif;font-size: 24px;">Junyi Wang</a><sup>1</sup>,
+                <a href="mailto:qy@buaa.edu.cn"
+                  style="font-family: 'Times New Roman', Times, serif;font-size: 24px;">Yue Qi</a><sup>1,*</sup>
+              </span>
+            </div>
+
+            <!-- affiliations -->
+            <div class="is-size-6 publication-authors">
+              <span class="author-block">
+                <sup>1</sup>State Key Laboratory of Virtual Reality Technology and Systems,<br>
+                School of Computer Science and Engineering, Beihang University
+              </span>
+              <br>
+              <span class="author-block" style="font-size: 0.9em;">
+                <sup>*</sup>Corresponding Author
+              </span>
+
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <div class="publication-links">
+                  <!-- PDF -->
+                  <!--
+                  <span class="link-block">
+                    <a href="https://arxiv.org/abs/2507.19830" class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Paper</span>
+                    </a>
+                  </span>-->
+                  <!-- arXiv -->
+                  <!--
+                  <span class="link-block">
+                    <a href="https://arxiv.org/abs/2507.19830" class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="ai ai-arxiv"></i>
+                      </span>
+                      <span>arXiv</span>
+                  
+                    </a>
+                  </span>
+                  -->
+                  <!-- Code -->
+                  <span class="link-block">
+                    <a href="https://github.com/yuzewang1998/takinglangsplatw"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fab fa-github"></i>
+                      </span>
+                      <span>Code</span>
+                    </a>
+                  </span>
+                  <!-- Data -->
+                  <span class="link-block">
+                    <a href="https://drive.google.com/drive/folders/1Ok64q8RyuqiBX62fLh2xVbOeyNg3IgQz" class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="far fa-images"></i>
+                      </span>
+                      <span>Data</span>
+                    </a>
+                  </span>
+                </div>
+              </span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+
+  <!DOCTYPE html>
+  <html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centered Title Example</title>
+    <style>
+      .centered-title {
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <section class="section">
+      <div class="container is-centered is-max-desktop">
+        <div class="column is-centered is-full-width">
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+              <div class="col-md-8 col-md-offset-2">
+                <div class="div-video-teaser" style="max-width: 100%; text-align: center;">
+                  <video class="responsive-video" controls autoplay loop muted style="width: 100%; height: auto;">
+                    <source src="./materials/video/interactive_demo.mp4" type="video/mp4" />
+                  </video>
+                </div>
+              </div>
+            </div>
+            <div class="content"
+              style="text-align: center; font-size: 1.0em; width: 100%; display: flex; justify-content: center;">
+              <p><strong>An Application of Our Method</strong>: Interactive Roaming with Open-vocabulary Queries.</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+              <h3 style="font-family: 'Times New Roman', Times, serif;">
+                TL;DR
+              </h3>
+
+              <div class="banner" style="font-family: 'Times New Roman', Times, serif;">
+                <b> Our method reconstructs language embedded 3D Gaussian splatting (3DGS) from an unconstrained photo
+                  collection of landmarks gathered from the Internet. This could help users intuitively and immersively
+                  understand a building’s structure, style, and historical context.
+                </b>
+              </div>
+
+              <br />
+            </div>
+          </div>
+          <section class="section">
+            <div class="container is-max-desktop">
+              <!-- Concurrent Work. -->
+              <div class="columns is-centered has-text-centered">
+                <div class="column is-full-width">
+                  <h2 class="title is-3">Motivation</h2>
+                  <div class="content has-text-justified">
+                    <img loading="lazy" src="./static/images/teaser.png">
+                    <p> Over the past few decades, researchers have used images collected from the Internet to
+                      reconstruct landmarks and historic sites, enabling their digital exploration and navigation.
+                      However, when it comes to understanding architectural styles and structural knowledge, people
+                      still primarily rely on static text-image pairs, lacking immersive visual experiences. <i><b>Can
+                          we take inspiration from successful 3D in-the-wild reconstruction methods to achieve low-cost
+                          fine-grained 3D understanding of architectural components from Internet-sourced unconstrained
+                          photo collections?</b></i> This could help users intuitively grasp a building’s structure,
+                      style, and historical context, enriching their engagement with iconic architecture.</p>
+                  </div>
+                </div>
+              </div>
+              <!--/ Concurrent Work. -->
+            </div>
+
+
+            <section class="section">
+              <div class="container is-max-desktop">
+                <!-- Concurrent Work. -->
+                <div class="columns is-centered has-text-centered">
+                  <div class="column is-full-width">
+                    <h2 class="title is-3">Method</h2>
+                    <div class="content has-text-justified">
+                      <img loading="lazy" src="./static/images/method.png">
+
+                      <p> (a) Our method takes an unconstrained photo collection as input, which contains transient
+                        occluders and appearance variations in each image. (b) After optimization, our method achieve
+                        high-quality open-vocabulary segmentation. (c) The proposed method supports various
+                        applications, including interactive roaming with open-vocabulary queries, architectural style
+                        pattern recognition, and 3D scene editing. </p>
+                    </div>
+                  </div>
+                </div>
+                <!--/ Concurrent Work. -->
+              </div>
+            </section>
+
+            <!--<section class="section">-->
+            <!--    <div class="container is-max-desktop">-->
+            <!--        &lt;!&ndash; Concurrent Work. &ndash;&gt;-->
+            <!--        <div class="columns is-centered has-text-centered">-->
+            <!--            <div class="column is-full-width">-->
+            <!--                <h2 class="title is-3">Video</h2>-->
+            <!--                <div class="content has-text-justified">-->
+            <!--                    <div class="publication-video">-->
+            <!--                        <iframe src="https://www.youtube.com/embed/rIbo61JqfJI?si=pn6__Vzw_KDP_D84" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>-->
+            <!--                    </div>-->
+
+            <!--                    <p>-->
+            <!--                        For the interactive visual comparison below, loading a large number of videos may take some time and resources. You can choose to balance this by watching the supplementary video.-->
+            <!--                    </p>-->
+            <!--                </div>-->
+
+            <!--            </div>-->
+            <!--        </div>-->
+            <!--        &lt;!&ndash;/ Concurrent Work. &ndash;&gt;-->
+            <!--    </div>-->
+            <!--</section>-->
+
+
+
+
+            <section class="section">
+              <div class="container is-max-desktop ">
+                <div class=" has-text-centered">
+                  <h2 class="title is-3">Open-Vocabulary Segmentation Results</h2>
+                  <p> <b>NOTE: Experience sync issues with the GIFs? Simply refresh the webpage to synchronize
+                      playback.</b></p>
+                  <div class="columns is-centered">
+                    <!-- Visual Effects. -->
+                    <div class="column">
+                      <div class="content">
+                        <div class="columns is-centered">
+                          <div class="column is-full-width">
+                            <div id="example1" class="bal-container-small">
+
+                              <div class="bal-after">
+                                <img id="1-a" class="gif-loader" data-src="./materials/video/comp/br.gif">
+                                <div class="bal-afterPosition afterLabel" style="z-index:1;">
+                                  Renderings
+                                </div>
+                              </div>
+
+                              <div class="bal-before" style="width:96.4968152866242%;">
+                                <div class="bal-before-inset" style="width: 512px;">
+                                  <img id="1-b" class="gif-loader" data-src="./materials/video/comp/bf.gif"
+                                    alt="GIF Loop">
+                                  <div class="bal-beforePosition beforeLabel">
+                                    Learned Language Feature
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="bal-handle" style="left:96.4968152866242%;">
+                                <span class=" handle-left-arrow"></span>
+                                <span class="handle-right-arrow"></span>
+                              </div>
+
+                            </div>
+                            <p>Renderings</p>
+                            <div id="example2" class="bal-container-small">
+
+                              <div class="bal-after">
+                                <img id="2-a" class="gif-loader" data-src="./materials/video/comp/b1.gif">
+                                <div class="bal-afterPosition afterLabel">
+                                  OV Segmentation Result
+                                </div>
+                              </div>
+
+                              <div class="bal-before" style="width: 50%;">
+                                <div class="bal-before-inset" style="width: 512px;">
+                                  <img id="2-b" class="gif-loader" data-src="./materials/video/comp/bf.gif">
+                                  <div class="bal-beforePosition beforeLabel">
+                                    Learned Language Feature
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="bal-handle" style="left: 50%;">
+                                <span class=" handle-left-arrow"></span>
+                                <span class="handle-right-arrow"></span>
+                              </div>
+                            </div>
+                            <p>Query: "<i>Column</i>" </p>
+                            <div id="example3" class="bal-container-small">
+
+                              <div class="bal-after">
+                                <img id="3-a" class="gif-loader" data-src="./materials/video/comp/b2.gif">
+                                <div class="bal-afterPosition afterLabel">
+                                  OV Segmentation Result
+                                </div>
+                              </div>
+
+                              <div class="bal-before" style="width: 50%;">
+                                <div class="bal-before-inset" style="width: 512px;">
+                                  <img id="3-b" class="gif-loader" data-src="./materials/video/comp/bf.gif">
+                                  <div class="bal-beforePosition beforeLabel">
+                                    Learned Language Feature
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="bal-handle" style="left: 50%;">
+                                <span class=" handle-left-arrow"></span>
+                                <span class="handle-right-arrow"></span>
+                              </div>
+                            </div>
+                            <p>Query: "<i>Iron Cross</i>"</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+
+                    <!--/ Visual Effects. -->
+                    <div class="column">
+                      <div class="content">
+                        <div class="columns is-centered">
+                          <div class="column is-full-width">
+
+                            <div id="example5" class="bal-container-small">
+
+                              <div class="bal-after">
+                                <img id="5-a" class="gif-loader" data-src="./materials/video/comp/pr.gif">
+                                <div class="bal-afterPosition afterLabel" style="z-index:1;">
+                                  Renderings
+                                </div>
+                              </div>
+
+                              <div class="bal-before" style="width:96.4968152866242%;">
+                                <div class="bal-before-inset" style="width: 512px;">
+                                  <img id="5-b" class="gif-loader" data-src="./materials/video/comp/pf.gif"
+                                    alt="GIF Loop">
+                                  <div class="bal-beforePosition beforeLabel">
+                                    Learned Language Feature</div>
+                                </div>
+                              </div>
+
+                              <div class="bal-handle" style="left:96.4968152866242%;">
+                                <span class=" handle-left-arrow"></span>
+                                <span class="handle-right-arrow"></span>
+                              </div>
+
+                            </div>
+                            <p>Renderings</p>
+                            <div id="example6" class="bal-container-small">
+
+                              <div class="bal-after">
+                                <img id="6-a" class="gif-loader" data-src="./materials/video/comp/p1.gif">
+                                <div class="bal-afterPosition afterLabel" style="z-index:1;">
+                                  OV Segmentation Result
+                                </div>
+                              </div>
+
+                              <div class="bal-before" style="width:96.4968152866242%;">
+                                <div class="bal-before-inset" style="width: 512px;">
+                                  <img id="6-b" class="gif-loader" data-src="./materials/video/comp/pf.gif"
+                                    alt="GIF Loop">
+                                  <div class="bal-beforePosition beforeLabel">
+                                    Learned Language Feature
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="bal-handle" style="left:96.4968152866242%;">
+                                <span class=" handle-left-arrow"></span>
+                                <span class="handle-right-arrow"></span>
+                              </div>
+
+                            </div>
+                            <p>Query:"<i>Obelisk of the Pantheon</i> "</p>
+                            <div id="example7" class="bal-container-small">
+
+                              <div class="bal-after">
+                                <img id="7-a" class="gif-loader" data-src="./materials/video/comp/p2.gif">
+                                <div class="bal-afterPosition afterLabel" style="z-index:1;">
+                                  OV Segmentation Result
+                                </div>
+                              </div>
+
+                              <div class="bal-before" style="width:96.4968152866242%;">
+                                <div class="bal-before-inset" style="width: 512px;">
+                                  <img id="7-b" class="gif-loader" data-src="./materials/video/comp/pf.gif"
+                                    alt="GIF Loop">
+                                  <div class="bal-beforePosition beforeLabel">
+                                    Learned Language Features
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="bal-handle" style="left:96.4968152866242%;">
+                                <span class=" handle-left-arrow"></span>
+                                <span class="handle-right-arrow"></span>
+                              </div>
+
+                            </div>
+                            <p>Query:"<i>Triangular Pediment</i> "</p>
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Matting. -->
+                    <div class="column">
+                      <div class="columns is-centered">
+                        <div class="column content">
+                          <div id="example9" class="bal-container-small">
+
+                            <div class="bal-after">
+                              <img id="9-a" class="gif-loader" data-src="./materials/video/comp/tr.gif">
+                              <div class="bal-afterPosition afterLabel" style="z-index:1;">
+                                Renderings
+                              </div>
+                            </div>
+
+                            <div class="bal-before" style="width:96.4968152866242%;">
+                              <div class="bal-before-inset" style="width: 512px;">
+                                <img id="9-b" class="gif-loader" data-src="./materials/video/comp/tf.gif"
+                                  alt="GIF Loop">
+                                <div class="bal-beforePosition beforeLabel">
+                                  Learned Language Feature
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="bal-handle" style="left:96.4968152866242%;">
+                              <span class=" handle-left-arrow"></span>
+                              <span class="handle-right-arrow"></span>
+                            </div>
+
+                          </div>
+                          <p>Renderings</p>
+                          <div id="example10" class="bal-container-small">
+
+                            <div class="bal-after">
+                              <img id="10-a" class="gif-loader" data-src="./materials/video/comp/t1.gif">
+                              <div class="bal-afterPosition afterLabel" style="z-index:1;">
+                                OV Segmentation Result
+                              </div>
+                            </div>
+
+                            <div class="bal-before" style="width:96.4968152866242%;">
+                              <div class="bal-before-inset" style="width: 512px;">
+                                <img id="10-b" class="gif-loader" data-src="./materials/video/comp/tf.gif"
+                                  alt="GIF Loop">
+                                <div class="bal-beforePosition beforeLabel">
+                                  Learned Language Feature
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="bal-handle" style="left:96.4968152866242%;">
+                              <span class=" handle-left-arrow"></span>
+                              <span class="handle-right-arrow"></span>
+                            </div>
+
+                          </div>
+                          <p>Query: "<i>Oceanus</i>"</p>
+                          <div id="example11" class="bal-container-small">
+
+                            <div class="bal-after">
+                              <img id="11-a" class="gif-loader" data-src="./materials/video/comp/t2.gif">
+                              <div class="bal-afterPosition afterLabel" style="z-index:1;">
+                                OV Segmentation Result
+                              </div>
+                            </div>
+
+                            <div class="bal-before" style="width:96.4968152866242%;">
+                              <div class="bal-before-inset" style="width: 512px;">
+                                <img id="11-b" class="gif-loader" data-src="./materials/video/comp/tf.gif"
+                                  alt="GIF Loop">
+                                <div class="bal-beforePosition beforeLabel">
+                                  Learned Language Feature
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="bal-handle" style="left:96.4968152866242%;">
+                              <span class=" handle-left-arrow"></span>
+                              <span class="handle-right-arrow"></span>
+                            </div>
+
+                          </div>
+
+                          <p>Query: "<i>Reliefs</i>"</p>
+
+
+                        </div>
+                      </div>
+                    </div>
+
+
+
+                  </div>
+                </div>
+
+
+              </div>
+            </section>
+
+            <!-- <section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Related Links</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            Needs update
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+            <!DOCTYPE html>
+            <html lang="en">
+
+            <head>
+              <meta charset="UTF-8">
+              <meta name="viewport" content="width=device-width, initial-scale=1.0">
+              <title>Centered Titles and Content Example</title>
+              <style>
+                .centered-title,
+                .centered-subtitle,
+                .centered-content {
+                  text-align: center;
+                }
+              </style>
+            </head>
+
+            <body>
+              <div class="container is-max-desktop">
+                <!-- Concurrent Work. -->
+                <div class="columns is-centered has-text-centered">
+                  <div class="column is-full-width">
+                    <h2 class="title is-3">Applications</h2>
+                    <div class="content has-text-justified">
+                      <h3 class="title is-3">1. Interactive Roaming with Open Vocabulary Queries</h3>
+                      <p> The proposed method can seamlessly integrate with in-the-wild radiance field reconstruction
+                        approaches. We developed an interactive system for users to remotely explore landmarks like the
+                        Trevi Fountain, with free-viewpoint roaming, lighting variations, and open-vocabulary queries.
+                        Please watch the video at the top of the webpage.</p>
+                      <h3 class="title is-3">2. Architectural Style Pattern Recognition</h3>
+                      <img loading="lazy" src="./static/images/aspr.png">
+                      <p>Our method is also effective for architectural style pattern recognition. Compared to vanilla
+                        CLIP, our 3D language field-based method achieves more accurate recognition.
+                      </p>
+                      <p>
+                        Additionally, we made an interesting discovery: the intermediate results of architectural style
+                        pattern recognition, specifically the heatmap of the fused score map, can be viewed as a
+                        visualization of "<b>what makes Buckingham Palace a neoclassical building</b>."
+                      </p>
+                      <h3 class="title is-3">3. 3D Scene Editing</h3>
+                      <img loading="lazy" src="./static/images/editing.png">
+                      <p> Our method can be applied to 3D segmentation and scene editing. For example, we query and edit
+                        the "Oceanus" and "Winged Horse" in the Trevi Fountain, scale, duplicate, and manipulate the
+                        selected 3D content, thereby creating novel 3D scenes.</p>
+                    </div>
+                  </div>
+                </div>
+                <!--/ Concurrent Work. -->
+              </div>
+            </body>
+
+            </html>
+
+            <section class="section">
+              <div class="container is-max-desktop">
+                <div class="columns is-centered has-text-centered">
+                  <div class="column is-full-width">
+                    <h2 class="title is-3"> Benchmark and Comparison </h2>
+                    <div class="content has-text-justified">
+
+                      <p>While benchmarks and evaluation schemes exist for well-captured photo collections, none have
+                        been established for outdoor unconstrained scenes. Therefore, we introduce Photo Tourism
+                        Open-Vocabulary Segmentation (PT-OVS) dataset, a new benchmark dataset derived from the public
+                        Photo Tourism, providing dense annotations for seven scenes, including architectural components
+                        and their historical contexts, such as the "Rose Window" and "Last Judgment" in Notre-Dame de
+                        Paris.</p>
+                      <p>
+                        <img loading="lazy" src="./static/images/compare.png">
+                        Experimental results show that our method significantly outperforms state-of-the-art methods in
+                        segmenting textual descriptions related to architectural components, while enabling applications
+                        such as interactive roaming with open-vocabulary queries, architectural style pattern
+                        recognition, and 3D scene editing.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- TODO: update the arxiv link and github -->
+            <footer class="footer">
+              <div class="container">
+                <div class="content has-text-centered">
+                  <!-- <a class="icon-link" href="">
+              <i class="fas fa-file-pdf"></i>
+            </a> -->
+                  <!-- <a class="icon-link" href="" class="external-link" disabled>
+              <i class="fab fa-github"></i> -->
+                  </a>
+                </div>
+                <div class="columns is-centered">
+                  <div class="column is-8">
+                    <div class="content">
+                      <p>
+                        This website is licensed under a <a rel="license"
+                          href="http://creativecommons.org/licenses/by-sa/4.0/">
+                          Creative
+                          Commons Attribution-ShareAlike 4.0 International License
+                        </a>.
+                      </p>
+                      <p>
+                        We thank the authors of
+                        We thank the authors of <a href="https://nerfies.github.io/">Nerfies</a> that kindly open
+                        sourced the
+                        template of this website.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </footer>
+
+
+
+  </body>
+
+  </html>
