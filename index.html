@@ -1,490 +1,323 @@
-<!DOCTYPE HTML>
-
-<style>
-  #full {
-    display: none;
-  }
-</style>
-
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title>Yuze Wang</title>
-
-  <meta name="author" content="Yuze Wang">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <link rel="stylesheet" type="text/css" href="stylesheet.css">
-  <link rel="icon" type="image/png" href="images/icon.png">
+  <meta name="author" content="Yuze Wang">
+  <meta name="description" content="Yuze Wang (王宇泽), Ph.D. student at Beihang University. Research in 3D vision, computer graphics, neural rendering, and immersive XR experiences.">
+  <title>Yuze Wang | 王宇泽</title>
+  <link rel="canonical" href="https://yuzewang1998.github.io/">
+  <link rel="stylesheet" href="stylesheet.css">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
 </head>
-
-
 <body>
-  <table
-    style="width:100%;max-width:850px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-    <tbody>
-      <tr style="padding:0px">
-        <td style="padding:0px">
-          <table
-            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-            <tbody>
-              <tr style="padding:0px">
-                <td style="padding:2.5%;width:60%;vertical-align:middle">
-                  <p style="text-align:center">
-                    <name>Yuze Wang | 王宇泽</name>
-                  </p>
-                  <p>
-                    I'm a third-year Ph.D. under the supervision of Prof. <a href="https://scse.buaa.edu.cn/info/1078/2661.htm">Yue Qi</a> at the <a
-                      href="https://vrlab.buaa.edu.cn/">State Key Laboratory of Virtual Reality Technology and
-                      Systems</a>, School of Computer Science and Engineering, Beihang University.
-                  </p>
-                  <p>
-                    My research combines Computer Vision (CV), Computer Graphics (CG), and Extended Reality (XR) techniques to enable <b>low-cost, interactive 3D scene generation from web-sourced multimodal data </b>, with the long-term goal of powering <b>immersive XR tourism experiences</b>. 
-                    Feel free to contact me for any questions, collaboration opportunities, or just for a chat.
-                  </p>
-                  <p style="text-align:center">
-                    <a href="yuzewang1998@buaa.edu.cn">Email</a> &nbsp;/&nbsp;
-                    <a href="images/cv.pdf">CV</a> &nbsp;/&nbsp;
-                    <a href="https://scholar.google.com/citations?user=V_5VPiEAAAAJ">Scholar</a> &nbsp;/&nbsp;
-                    <a href="images/wechat.jpg">WeChat</a> &nbsp;/&nbsp;
-                    <a href="https://github.com/yuzewang1998">Github</a>
-                  </p>
-                </td>
-                <td style="padding:3%;width:40%;max-width:40%">
-                  <img style="width:70%;max-width:70%" alt="profile photo" src="images/pandas.jpg"
-                    class="hoverZoomLink">
-                </td>
-              </tr>
-            </tbody>
-          </table>
+  <a class="skip-link" href="#publications">Skip to publications</a>
+  <main>
+    <header class="profile" id="about">
+      <div class="profile-copy">
+        <h1>Yuze Wang <span lang="zh-CN">| 王宇泽</span></h1>
+        <p>I'm a Ph.D. student under the supervision of Prof. <a href="https://scse.buaa.edu.cn/info/1078/2661.htm">Yue Qi</a> at the <a href="https://vrlab.buaa.edu.cn/">State Key Laboratory of Virtual Reality Technology and Systems</a>, School of Computer Science and Engineering, Beihang University.</p>
+        <p>My research combines Computer Vision (CV), Computer Graphics (CG), and Extended Reality (XR) techniques to enable <strong>low-cost, interactive 3D scene generation from web-sourced multimodal data</strong>, with the long-term goal of powering <strong>immersive XR tourism experiences</strong>.</p>
+        <p>Feel free to contact me for any questions, collaboration opportunities, or just for a chat.</p>
+        <nav class="contact-links" aria-label="Contact and profiles">
+          <a href="mailto:yuzewang1998@buaa.edu.cn">
+            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></svg>
+            Email
+          </a>
+          <a href="images/cv.pdf">
+            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8l-5-5Z"/><path d="M14 3v5h5M9 12h6M9 16h6"/></svg>
+            CV
+          </a>
+          <a href="https://scholar.google.com/citations?user=V_5VPiEAAAAJ">
+            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m2 9 10-5 10 5-10 5L2 9Zm4 2v6c3.5 3 8.5 3 12 0v-6M22 9v7"/></svg>
+            Google Scholar
+          </a>
+          <a href="images/wechat.jpg">
+            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15.6 8.2C15.1 5.8 12.3 4 9 4 5.1 4 2 6.5 2 9.5c0 1.6.8 3 2.2 4L3.6 16l2.9-1.4 1.3.3"/><path d="M22 14c0-2.8-2.9-5-6.5-5S9 11.2 9 14s2.9 5 6.5 5c.8 0 1.6-.1 2.3-.3l2.6 1.3-.5-2.3A4.6 4.6 0 0 0 22 14Z"/><g fill="currentColor" stroke="none"><circle cx="6.5" cy="8.5" r="1"/><circle cx="11.5" cy="8.5" r="1"/><circle cx="13" cy="13.5" r=".9"/><circle cx="18" cy="13.5" r=".9"/></g></svg>
+            WeChat
+          </a>
+          <a href="https://github.com/yuzewang1998">
+            <svg class="contact-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 .75a11.25 11.25 0 0 0-3.558 21.923c.563.104.768-.244.768-.542 0-.267-.01-.975-.015-1.914-3.13.68-3.791-1.51-3.791-1.51-.512-1.3-1.25-1.647-1.25-1.647-1.023-.7.077-.686.077-.686 1.131.08 1.726 1.16 1.726 1.16 1.006 1.725 2.64 1.227 3.282.938.103-.729.394-1.227.716-1.509-2.5-.284-5.127-1.25-5.127-5.562 0-1.228.44-2.233 1.16-3.02-.116-.284-.502-1.428.11-2.978 0 0 .945-.302 3.094 1.154A10.79 10.79 0 0 1 12 6.177c.957.004 1.92.13 2.82.38 2.148-1.456 3.09-1.154 3.09-1.154.615 1.55.228 2.694.113 2.978.722.787 1.158 1.792 1.158 3.02 0 4.322-2.63 5.275-5.136 5.553.404.349.764 1.036.764 2.088 0 1.507-.014 2.723-.014 3.093 0 .3.203.651.774.54A11.252 11.252 0 0 0 12 .75Z"/></svg>
+            GitHub
+          </a>
+        </nav>
+      </div>
+      <img class="profile-image" src="images/pandas.jpg" alt="Yuze Wang profile image" width="200" height="200">
+    </header>
+
+    <nav class="section-nav" aria-label="Page sections">
+      <a href="#preprints">Preprints</a>
+      <a href="#publications">Publications</a>
+      <a href="#services">Academic Services</a>
+    </nav>
+
+    <section id="preprints" aria-labelledby="preprints-heading">
+      <h2 id="preprints-heading">Preprints</h2>
+      <p class="section-note">Manuscripts available on arXiv.</p>
+        <article class="publication" id="archgpt">
+          <img class="publication-image" src="images/archgpt.png" alt="ArchGPT: Understanding the World&#x27;s Architectures with Large Multimodal Models — overview" loading="lazy" decoding="async">
+          <div class="publication-body">
+            <h3>ArchGPT: Understanding the World&#x27;s Architectures with Large Multimodal Models</h3>
+            <p class="authors"><strong>Yuze Wang</strong>, Luo Yang, <a href="https://junyiwang.github.io/">Junyi Wang</a>, <a href="https://scholar.google.com.hk/citations?hl=zh-CN&amp;user=Q-UkdjUAAAAJ">Yue Qi</a></p>
+            <p class="venue">arXiv, September 2025</p>
+            <p class="paper-links">
+              <a href="https://arxiv.org/abs/2509.20858">arXiv</a>
+            </p>
+          </div>
+        </article>
+
+        <article class="publication" id="we-gs">
+          <img class="publication-image" src="images/wegs_2024.gif" alt="WE-GS: An In-the-wild Efficient 3D Gaussian Representation for Unconstrained Photo Collections — overview" loading="lazy" decoding="async">
+          <div class="publication-body">
+            <h3>WE-GS: An In-the-wild Efficient 3D Gaussian Representation for Unconstrained Photo Collections</h3>
+            <p class="authors"><strong>Yuze Wang</strong>, <a href="https://junyiwang.github.io/">Junyi Wang</a>, <a href="https://scholar.google.com.hk/citations?hl=zh-CN&amp;user=Q-UkdjUAAAAJ">Yue Qi</a></p>
+            <p class="venue">arXiv, June 2024</p>
+            <p class="paper-links">
+              <a href="https://yuzewang1998.github.io/we-gs.github.io/">Project</a>
+              <a href="https://arxiv.org/abs/2406.02407">Paper</a>
+            </p>
+          </div>
+        </article>
+    </section>
 
 
+    <section id="publications" aria-labelledby="publications-heading">
+      <h2 id="publications-heading">Selected Publications</h2>
+      <p class="section-note">* denotes equal contribution or corresponding authorship, as indicated in the paper.</p>
+      <nav class="year-nav" aria-label="Publication years">
+        <a href="#year-2026">2026</a>
+        <a href="#year-2025">2025</a>
+        <a href="#year-2024">2024</a>
+        <a href="#year-2023">2023</a>
+        <a href="#year-2020">2020</a>
+      </nav>
 
+      <section class="year-group" aria-labelledby="year-2026">
+        <h3 class="year-heading" id="year-2026">2026</h3>
+        <article class="publication" id="visual-camera-localization">
+          <img class="publication-image" src="images/visual-camera-localization-2026.png" alt="TIP visual localization pipeline: GCFDNet descriptors and combined optimization of points, descriptors, and semantic objects" loading="lazy" decoding="async">
+          <div class="publication-body">
+            <h4>Visual Camera Localization by Globally Consistent Descriptor Learning and Combined Bundle Adjustment</h4>
+            <p class="authors"><a href="https://junyiwang.github.io/">Junyi Wang</a>, <strong>Yuze Wang</strong>, Chen Wang, <a href="https://scholar.google.com/citations?user=Q-UkdjUAAAAJ">Yue Qi</a></p>
+            <p class="venue">IEEE Transactions on Image Processing (TIP) 2026</p>
+            <p class="paper-links">
+              <a href="https://doi.org/10.1109/TIP.2026.3698365">Paper</a>
+            </p>
+          </div>
+        </article>
 
-          <table
-            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-            <tbody>
-              <tr>
-                <td style="padding:20px;width:100%;vertical-align:middle">
-                  <p>
-                    <heading>Preprints</heading>
-                  </p>
-                  <p>
-                    * indicates equal contribution ( equal first author or equal corresponding author)
-                  </p>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+        <article class="publication" id="urban-gs">
+          <img class="publication-image" src="images/urban-gs-2026.png" alt="Urban-GS: A Unified 3D Gaussian Splatting Framework for Compact and High-Fidelity Aerial-to-Street Reconstruction — overview" loading="lazy" decoding="async">
+          <div class="publication-body">
+            <h4>Urban-GS: A Unified 3D Gaussian Splatting Framework for Compact and High-Fidelity Aerial-to-Street Reconstruction</h4>
+            <p class="authors">Meng Wang, Changqun Xia, <strong>Yuze Wang</strong>, <a href="https://junyiwang.github.io/">Junyi Wang</a>, Wantong Duan, Xinxiong Xie, <a href="https://scholar.google.com/citations?user=Q-UkdjUAAAAJ">Yue Qi</a></p>
+            <p class="venue">IEEE/CVF CVPR 2026</p>
+            <p class="paper-links">
+              <a href="https://openaccess.thecvf.com/content/CVPR2026/papers/Wang_Urban-GS_A_Unified_3D_Gaussian_Splatting_Framework_for_Compact_and_CVPR_2026_paper.pdf">Paper</a>
+              <a href="https://github.com/wangm-buaa/Urban-GS">Code</a>
+            </p>
+          </div>
+        </article>
 
-          <table
-            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-            <tbody>
+        <article class="publication" id="taking-language-wild">
+          <img class="publication-image" src="images/takinglangsplatw.png" alt="Taking Language Embedded 3D Gaussian Splatting into the Wild — overview" loading="lazy" decoding="async">
+          <div class="publication-body">
+            <h4>Taking Language Embedded 3D Gaussian Splatting into the Wild</h4>
+            <p class="authors"><strong>Yuze Wang</strong>, <a href="https://junyiwang.github.io/">Junyi Wang</a>, <a href="https://scholar.google.com.hk/citations?hl=zh-CN&amp;user=Q-UkdjUAAAAJ">Yue Qi</a></p>
+            <p class="venue">IEEE VR 2026 · IEEE Transactions on Visualization and Computer Graphics (TVCG)</p>
+            <p class="paper-links">
+              <a href="https://yuzewang1998.github.io/takinglangsplatw/">Project</a>
+              <a href="https://arxiv.org/abs/2507.19830">arXiv</a>
+              <a href="https://www.computer.org/csdl/journal/tg/2026/05/11474631/2fo8AbfqV1u">Paper</a>
+              <a href="https://www.youtube.com/watch?v=P0yYZJ1Si9w">Video</a>
+              <a href="https://github.com/yuzewang1998/takinglangsplatw">Code</a>
+              <a href="https://drive.google.com/drive/folders/1Ok64q8RyuqiBX62fLh2xVbOeyNg3IgQz">Data</a>
+            </p>
+          </div>
+        </article>
 
-              <table
-                style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-                <tbody>
+        <article class="publication" id="gsbrief">
+          <img class="publication-image" src="images/gsbrief-2026.png" alt="GSBriefNet architecture for descriptor prediction, matching, and camera pose estimation" loading="lazy" decoding="async">
+          <div class="publication-body">
+            <h4>GSBrief: A Globally Consistent Descriptor with 3D Gaussian Splatting for Visual Localization</h4>
+            <p class="authors"><a href="https://junyiwang.github.io/">Junyi Wang</a>, <strong>Yuze Wang</strong>, Wantong Duan, Meng Wang, <a href="https://scholar.google.com/citations?user=Q-UkdjUAAAAJ">Yue Qi</a></p>
+            <p class="venue">IEEE VR 2026</p>
+            <p class="paper-links">
+              <a href="https://doi.org/10.1109/VR67842.2026.00049">Paper</a>
+            </p>
+          </div>
+        </article>
 
-                                    <tr>
-                                      <td style="padding:20px;width:30%;max-width:30%" align="center">
-                                        <img style="width:100%;max-width:100%" src="images/archgpt.png" alt="dise">
-                                      </td>
-                                      <td width="75%" valign="center">
-                                        <papertitle> ArchGPT: Understanding the World's Architectures with Large Multimodal Models
-                                        </papertitle>
-                                        <br>
-                                        <strong>Yuze Wang</strong>,
-                                        <a href=" ">Luo Yang</a>,
-                                        <a href="https://junyiwang.github.io/">Junyi Wang</a>,
-                                        <a href="https://scholar.google.com.hk/citations?hl=zh-CN&user=Q-UkdjUAAAAJ">Yue Qi </a>
-                                        <br>
-                                        <em>arxiv 2025.09 </em>
-                                        <br>
-                                        <a href="https://arxiv.org/pdf/2509.20858">[Paper]</a>
-                                        <a href=" ">[Code]</a>
-                                        <a href=" ">[Data]</a>
-                                        <br>
-                                      </td>
-                                    </tr>
+        <article class="publication" id="deocc-1-to-3">
+          <img class="publication-image" src="images/deocc123.png" alt="DeOcc-1-to-3: 3D De-Occlusion from a Single Image via Self-Supervised Multi-View Diffusion — overview" loading="lazy" decoding="async">
+          <div class="publication-body">
+            <h4>DeOcc-1-to-3: 3D De-Occlusion from a Single Image via Self-Supervised Multi-View Diffusion</h4>
+            <p class="authors"><a href="https://quyans.github.io/">Yansong Qu</a>, Shaohui Dai, <a href="https://scholar.google.com.hk/citations?hl=zh-CN&amp;user=M9rwkHwAAAAJ">Xinyang Li</a>, <strong>Yuze Wang</strong>, You Shen, Shengchuan Zhang, <a href="https://scholar.google.com.hk/citations?user=iYEcVaAAAAAJ&amp;hl=zh-CN">Liujuan Cao</a></p>
+            <p class="venue">AAAI 2026</p>
+            <p class="paper-links">
+              <a href="https://ojs.aaai.org/index.php/AAAI/article/view/37820">Paper</a>
+              <a href="https://arxiv.org/abs/2506.21544">arXiv</a>
+              <a href="https://quyans.github.io/DeOcc123/">Project</a>
+              <a href="https://github.com/Quyans/DeOcc123">Code</a>
+            </p>
+          </div>
+        </article>
+      </section>
 
+      <section class="year-group" aria-labelledby="year-2025">
+        <h3 class="year-heading" id="year-2025">2025</h3>
+        <article class="publication" id="scene-independent-relocalization">
+          <img class="publication-image" src="images/nips_2025.png" alt="3D Gaussian Splatting based Scene-independent Relocalization with Unidirectional and Bidirectional Feature Fusion — overview" loading="lazy" decoding="async">
+          <div class="publication-body">
+            <h4>3D Gaussian Splatting based Scene-independent Relocalization with Unidirectional and Bidirectional Feature Fusion</h4>
+            <p class="authors"><a href="https://junyiwang.github.io/">Junyi Wang</a>, <strong>Yuze Wang</strong>, Wantong Duan, Meng Wang, <a href="https://scholar.google.com.hk/citations?hl=zh-CN&amp;user=Q-UkdjUAAAAJ">Yue Qi</a></p>
+            <p class="venue">NeurIPS 2025</p>
+            <p class="paper-links">
+              <a href="https://neurips.cc/virtual/2025/loc/san-diego/poster/116876">Conference</a>
+              <a href="https://openreview.net/forum?id=ewgZItWaHh">Paper</a>
+            </p>
+          </div>
+        </article>
 
+        <article class="publication" id="seg-wild">
+          <img class="publication-image" src="images/seg_wild.png" alt="Seg-Wild: Interactive Segmentation based on 3D Gaussian Splatting for Unconstrained Image Collections — overview" loading="lazy" decoding="async">
+          <div class="publication-body">
+            <h4>Seg-Wild: Interactive Segmentation based on 3D Gaussian Splatting for Unconstrained Image Collections</h4>
+            <p class="authors">Yongtang Bao, Chengjie Tang, <strong>Yuze Wang*</strong>, Haojie Li*</p>
+            <p class="venue">ACM Multimedia (MM) 2025</p>
+            <p class="paper-links">
+              <a href="https://dl.acm.org/doi/10.1145/3746027.3755567">Paper</a>
+              <a href="https://arxiv.org/pdf/2507.07395">arXiv</a>
+              <a href="https://github.com/Sugar0725/Seg-Wild">Code</a>
+            </p>
+          </div>
+        </article>
 
+        <article class="publication" id="rise-editing">
+          <img class="publication-image" src="images/rise_editing_2025.gif" alt="RISE-Editing: Rotation-invariant Neural Point Fields with Interactive Segmentation for Fine-grained and Efficient Editing — overview" loading="lazy" decoding="async">
+          <div class="publication-body">
+            <h4>RISE-Editing: Rotation-invariant Neural Point Fields with Interactive Segmentation for Fine-grained and Efficient Editing</h4>
+            <p class="authors"><strong>Yuze Wang</strong>, <a href="https://junyiwang.github.io/">Junyi Wang</a>, Chen Wang, <a href="https://scholar.google.com.hk/citations?hl=zh-CN&amp;user=Q-UkdjUAAAAJ">Yue Qi</a></p>
+            <p class="venue">Neural Networks 2025</p>
+            <p class="paper-links">
+              <a href="https://www.sciencedirect.com/science/article/abs/pii/S0893608025001832">Paper</a>
+              <a href="https://github.com/yuzewang1998/RISE-Editing">Code</a>
+            </p>
+          </div>
+        </article>
 
-                  <tr>
-                    <td style="padding:20px;width:30%;max-width:30%" align="center">
-                      <img style="width:100%;max-width:100%" src="images/wegs_2024.gif" alt="dise">
-                    </td>
-                    <td width="75%" valign="center">
-                      <papertitle>WE-GS: An In-the-wild Efficient 3D Gaussian Representation for Unconstrained Photo
-                        Collections</papertitle>
-                      <br>
-                      <strong>Yuze Wang</strong>,
-                      <a href="https://junyiwang.github.io/">Junyi Wang</a>,
-                      <a href="https://scholar.google.com.hk/citations?hl=zh-CN&user=Q-UkdjUAAAAJ">Yue Qi </a>
-                      <br>
-                      <em>arxiv 2024.06 </em>
-                      <br>
-                      <a href="https://yuzewang1998.github.io/we-gs.github.io/">[Project Page]</a>
-                      <a href="https://arxiv.org/abs/2406.02407">[Paper]</a>
-                      <br>
-                    </td>
-                  </tr>
+        <article class="publication" id="interactive-segmentation">
+          <img class="publication-image" src="images/eaai.jpg" alt="Efficient interactive segmentation of three-dimensional Gaussians with optimal view selection — overview" loading="lazy" decoding="async">
+          <div class="publication-body">
+            <h4>Efficient interactive segmentation of three-dimensional Gaussians with optimal view selection</h4>
+            <p class="authors">Yongtang Bao, Chengjie Tang, <strong>Yuze Wang*</strong>, Yutong Qi, Ruijun Liu*</p>
+            <p class="venue">Engineering Applications of Artificial Intelligence (EAAI) 2025</p>
+            <p class="paper-links">
+              <a href="https://www.sciencedirect.com/science/article/pii/S095219762502439X?dgcid=coauthor">Paper</a>
+            </p>
+          </div>
+        </article>
 
-                </tbody>
-              </table>
+        <article class="publication" id="look-at-the-sky">
+          <img class="publication-image" src="images/lasgs_2025.gif" alt="Look at the Sky: Sky-aware Efficient 3D Gaussian Splatting in the Wild — overview" loading="lazy" decoding="async">
+          <div class="publication-body">
+            <h4>Look at the Sky: Sky-aware Efficient 3D Gaussian Splatting in the Wild</h4>
+            <p class="authors"><strong>Yuze Wang</strong>, <a href="https://junyiwang.github.io/">Junyi Wang</a>, Ruicheng Gao, <a href="https://quyans.github.io/">Yansong Qu</a>, Wantong Duan, Shuo Yang, <a href="https://scholar.google.com.hk/citations?hl=zh-CN&amp;user=Q-UkdjUAAAAJ">Yue Qi</a></p>
+            <p class="venue">IEEE VR 2025 · IEEE Transactions on Visualization and Computer Graphics (TVCG)</p>
+            <p class="award">IEEE VR 2025 Best Paper Award</p>
+            <p class="paper-links">
+              <a href="https://ieeexplore.ieee.org/abstract/document/10916815">Paper</a>
+              <a href="https://www.youtube.com/watch?v=0ZVuUjg0ck8">Video</a>
+            </p>
+          </div>
+        </article>
+      </section>
 
+      <section class="year-group" aria-labelledby="year-2024">
+        <h3 class="year-heading" id="year-2024">2024</h3>
+        <article class="publication" id="scarf">
+          <img class="publication-image" src="images/scarf_2024.jpg" alt="SCARF: Scalable Continual Learning Framework for Memory‐efficient Multiple Neural Radiance Fields — overview" loading="lazy" decoding="async">
+          <div class="publication-body">
+            <h4>SCARF: Scalable Continual Learning Framework for Memory‐efficient Multiple Neural Radiance Fields</h4>
+            <p class="authors"><strong>Yuze Wang</strong>, <a href="https://junyiwang.github.io/">Junyi Wang</a>, Chen Wang, Wantong Duan, <a href="http://cise.sdust.edu.cn/home/Page/teacher_detail/catId/31/id/503.html">Yongtang Bao</a>, <a href="https://scholar.google.com.hk/citations?hl=zh-CN&amp;user=Q-UkdjUAAAAJ">Yue Qi</a></p>
+            <p class="venue">Pacific Graphics 2024 · Computer Graphics Forum (CGF)</p>
+            <p class="paper-links">
+              <a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/cgf.15255">Paper</a>
+            </p>
+          </div>
+        </article>
+      </section>
 
+      <section class="year-group" aria-labelledby="year-2023">
+        <h3 class="year-heading" id="year-2023">2023</h3>
+        <article class="publication" id="sg-nerf">
+          <img class="publication-image" src="images/sgnerf2.png" alt="SG-NeRF: Semantic-guided Point-based Neural Radiance Fields — overview" loading="lazy" decoding="async">
+          <div class="publication-body">
+            <h4>SG-NeRF: Semantic-guided Point-based Neural Radiance Fields</h4>
+            <p class="authors"><a href="https://quyans.github.io/">Yansong Qu*</a>, <strong>Yuze Wang*</strong>, <a href="https://scholar.google.com.hk/citations?hl=zh-CN&amp;user=Q-UkdjUAAAAJ">Yue Qi</a></p>
+            <p class="venue">IEEE ICME 2023</p>
+            <p class="paper-links">
+              <a href="https://ieeexplore.ieee.org/abstract/document/10219715">Paper</a>
+              <a href="https://github.com/Quyans/SG-NeRF">Code</a>
+            </p>
+          </div>
+        </article>
 
-              <table
-                style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-                <tbody>
-                  <tr>
-                    <td style="padding:20px;width:100%;vertical-align:middle">
-                      <p>
-                        <heading>Selected Publications</heading>
-                      </p>
-                      <p>
-                        * indicates equal contribution ( equal first author or equal corresponding author)
-                      </p>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+        <article class="publication" id="rip-nerf">
+          <img class="publication-image" src="images/ripnerf_2023.gif" alt="RIP-NeRF: Learning Rotation-Invariant Point-based Neural Radiance Field for Fine-grained Editing and Compositing — overview" loading="lazy" decoding="async">
+          <div class="publication-body">
+            <h4>RIP-NeRF: Learning Rotation-Invariant Point-based Neural Radiance Field for Fine-grained Editing and Compositing</h4>
+            <p class="authors"><strong>Yuze Wang</strong>, <a href="https://junyiwang.github.io/">Junyi Wang</a>, <a href="https://quyans.github.io/">Yansong Qu</a>, <a href="https://scholar.google.com.hk/citations?hl=zh-CN&amp;user=Q-UkdjUAAAAJ">Yue Qi</a></p>
+            <p class="venue">ACM ICMR 2023</p>
+            <p class="paper-links">
+              <a href="https://dl.acm.org/doi/abs/10.1145/3591106.3592276">Paper</a>
+              <a href="https://github.com/yuzewang1998/RISE-Editing">Code</a>
+            </p>
+          </div>
+        </article>
+      </section>
 
-              <table
-                style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-                <tbody>
-                  <tr>
+      <section class="year-group" aria-labelledby="year-2020">
+        <h3 class="year-heading" id="year-2020">2020</h3>
+        <article class="publication" id="multi-sensor-ds">
+          <img class="publication-image" src="images/soft_computing_2020.jpg" alt="An improved multi-sensor D–S rule for conflict reassignment of failure rate of set — overview" loading="lazy" decoding="async">
+          <div class="publication-body">
+            <h4>An improved multi-sensor D–S rule for conflict reassignment of failure rate of set</h4>
+            <p class="authors">Jiale Qiao, Jindong Zhang, <strong>Yuze Wang</strong></p>
+            <p class="venue">Soft Computing 2020</p>
+            <p class="paper-links">
+              <a href="https://link.springer.com/article/10.1007/s00500-020-05298-5">Paper</a>
+            </p>
+          </div>
+        </article>
 
-                                      <tr>
-                                        <td style="padding:20px;width:30%;max-width:30%" align="center">
-                                          <img style="width:100%;max-width:100%" src="images/takinglangsplatw.png" alt="dise">
-                                        </td>
-                                        <td width="75%" valign="center">
-                                          <papertitle>Taking Language Embedded 3D Gaussian Splatting into the Wild
-                                          </papertitle>
-                                          <br>
-                                          <strong>Yuze Wang</strong>,
-                                          <a href="https://junyiwang.github.io/">Junyi Wang</a>,
-                                          <a href="https://scholar.google.com.hk/citations?hl=zh-CN&user=Q-UkdjUAAAAJ">Yue Qi </a>
-                                          <br>
-                                          <em>IEEE Virtual Reality (VR) 2026 -- IEEE Transactions on Visualization and Computer Graphics (TVCG) 2026 </em>
-                                          <br>
-                                          <a href="https://yuzewang1998.github.io/takinglangsplatw/">[Project Page]</a>
-                                          <a href="https://arxiv.org/abs/2507.19830">[arXiv]</a>
-                                          <a href="https://www.computer.org/csdl/journal/tg/2026/05/11474631/2fo8AbfqV1u">[Paper]</a>
-                                          <a href="https://www.youtube.com/watch?v=P0yYZJ1Si9w">[Video]</a>
-                                          <a href="https://github.com/yuzewang1998/takinglangsplatw">[Code]</a>
-                                          <a href="https://drive.google.com/drive/folders/1Ok64q8RyuqiBX62fLh2xVbOeyNg3IgQz">[Data]</a>
-                                          <br>
-                                        </td>
-                                      </tr>
+        <article class="publication" id="evidential-source-separation">
+          <img class="publication-image" src="images/ieee_sensors_2019.jpg" alt="An information entropy-based method of evidential source separation and refusion — overview" loading="lazy" decoding="async">
+          <div class="publication-body">
+            <h4>An information entropy-based method of evidential source separation and refusion</h4>
+            <p class="authors"><strong>Yuze Wang</strong>, Jindong Zhang, Jiale Qiao</p>
+            <p class="venue">IEEE Sensors Journal 2020</p>
+            <p class="paper-links">
+              <a href="https://ieeexplore.ieee.org/abstract/document/8832186">Paper</a>
+            </p>
+          </div>
+        </article>
+      </section>
 
+    </section>
 
-                  <tr>
-                    <td style="padding:20px;width:30%;max-width:30%" align="center">
-                      <img style="width:100%;max-width:100%" src="images/deocc123.png" alt="dise">
-                    </td>
-                    <td width="75%" valign="center">
-                      <papertitle>DeOcc-1-to-3: 3D De-Occlusion from a Single Image via Self-Supervised Multi-View
-                        Diffusion</papertitle>
-                      <br>
-                      <a href="https://quyans.github.io/"> Yansong Qu </a>,
-                      <a href=""> Shaohui Dai</a>,
-                      <a href="https://scholar.google.com.hk/citations?hl=zh-CN&user=M9rwkHwAAAAJ"> Xinyang Li </a>,
-                      <strong> Yuze Wang </strong>,
-                      <a href=""> You Shen</a>,
-                      <a href="https://scholar.google.com.hk/citations?user=iYEcVaAAAAAJ&hl=zh-CN&oi=ao"> Liujuan
-                        Cao</a>,
-                      <a href="https://scholar.google.com.hk/citations?user=lRSD7PQAAAAJ&hl=zh-CN&oi=ao"> Rongrong
-                        Ji</a>
-                      <br>
-                      <em>AAAI 2026 </em>
-                      <br>
-                      <a href="https://quyans.github.io/DeOcc123/">[Project Page]</a>
-                      <a href="https://arxiv.org/pdf/2506.21544">[Paper]</a>
-                      <a href="https://github.com/Quyans/DeOcc123">[Code]</a>
-                      <br>
-                    </td>
-                  </tr>
+    <section id="services" aria-labelledby="services-heading">
+      <h2 id="services-heading">Academic Services</h2>
+      <p>Reviewer for <strong>IEEE TVCG</strong>, <strong>IEEE TMM</strong>, <strong>IEEE VR</strong>, <strong>CHI</strong>, <strong>IEEE ISMAR</strong>, <strong>PacificVis</strong>, <strong>CVPR</strong>, <strong>ECCV</strong>, <strong>ACM MM</strong>, etc.</p>
+    </section>
+  </main>
 
-                                    <tr>
-                    <td style="padding:20px;width:30%;max-width:30%" align="center">
-                      <img style="width:100%;max-width:100%" src="images/nips_2025.png" alt="dise">
-                    </td>
-                    <td width="75%" valign="center">
-                      <papertitle>3D Gaussian Splatting based Scene-independent Relocalization with Unidirectional and Bidirectional Feature Fusion</papertitle>
-                      <br>
-                      <a href="https://junyiwang.github.io/"> Junyi Wang </a>,
-                      <strong> Yuze Wang </strong>,
-                      <a href=""> Wantong Duan </a>,
-                      <strong> Meng Wang </strong>,
-                      <a href="https://scholar.google.com.hk/citations?hl=zh-CN&user=Q-UkdjUAAAAJ">Yue Qi </a>,
-                      <br>
-                      <em>NIPS 2025 </em>
-                      <br>
-                      <a href="https://neurips.cc/virtual/2025/loc/san-diego/poster/116876">[Project Page]</a>
-                      <a href="https://openreview.net/forum?id=ewgZItWaHh">[Paper]</a>
-                      <br>
-                    </td>
-                  </tr>
-
-
-                  <tr>
-                    <td style="padding:20px;width:30%;max-width:30%" align="center">
-                      <img style="width:100%;max-width:100%" src="images/seg_wild.png" alt="dise">
-                    </td>
-                    <td width="75%" valign="center">
-                      <papertitle>Seg-Wild: Interactive Segmentation based on 3D Gaussian Splatting for Unconstrained
-                        Image Collections</papertitle>
-                      <br>
-                      <a href="">Yongtang Bao</a>,
-                      <a href="">Chengjie Tang</a>,
-                      <strong>Yuze Wang*</strong>,
-                      <a href="">Haojie Li* </a>
-                      <br>
-                      <em>ACM MM 2025 </em>
-                      <br>
-                      <a href="https://arxiv.org/pdf/2507.07395">[ArXiv]</a>
-                      <a href="https://github.com/Sugar0725/Seg-Wild">[Code]</a>
-                      <br>
-                    </td>
-                  </tr>
-
-
-                  <tr>
-                    <td style="padding:20px;width:30%;max-width:30%" align="center">
-                      <img style="width:100%;max-width:100%" src="images/rise_editing_2025.gif" alt="dise">
-                    </td>
-                    <td width="75%" valign="center">
-                      <papertitle>RISE-Editing: Rotation-invariant Neural Point Fields with Interactive Segmentation for
-                        Fine-grained and Efficient Editing</papertitle>
-                      <br>
-                      <strong>Yuze Wang</strong>,
-                      <a href="https://junyiwang.github.io/">Junyi Wang</a>,
-                      <a href="">Chen Wang</a>,
-                      <a href="https://scholar.google.com.hk/citations?hl=zh-CN&user=Q-UkdjUAAAAJ">Yue Qi </a>
-                      <br>
-                      <em>Neural Networks 2025 </em>
-                      <br>
-                      <a href="https://www.sciencedirect.com/science/article/abs/pii/S0893608025001832">[Paper]</a>
-                      <a href="https://github.com/yuzewang1998/RISE-Editing">[Code]</a>
-                      <br>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td style="padding:20px;width:30%;max-width:30%" align="center">
-                      <img style="width:100%;max-width:100%" src="images/eaai.jpg" alt="dise">
-                    </td>
-                    <td width="75%" valign="center">
-                      <papertitle>Efficient interactive segmentation of three-dimensional Gaussians with optimal view selection</papertitle>
-                      <br>
-                      <a href="">Yongtang Bao</a>,
-                      <a href="">Chengjie Tang</a>,
-                      <strong>Yuze Wang*</strong>,
-                      <a href="">Yutong Qi</a>,
-                      <a href="">Ruijun Liu* </a>
-                      <br>
-                      <em>EAAI 2025 </em>
-                      <br>
-                      <a href="https://www.sciencedirect.com/science/article/pii/S095219762502439X?dgcid=coauthor">[Paper]</a>
-                      <a href="">[Code]</a>
-                      <br>
-                    </td>
-                  </tr>
-
-
-                  <tr>
-                    <td style="padding:20px;width:30%;max-width:30%" align="center">
-                      <img style="width:100%;max-width:100%" src="images/lasgs_2025.gif" alt="dise">
-                    </td>
-                    <td width="75%" valign="center">
-                      <papertitle>Look at the Sky: Sky-aware Efficient 3D Gaussian Splatting in the Wild</papertitle>
-                      <br>
-                      <strong>Yuze Wang</strong>,
-                      <a href="https://junyiwang.github.io/">Junyi Wang</a>,
-                      <a href="">Ruicheng Gao</a>,
-                      <a href="https://quyans.github.io/">Yansong Qu</a>,
-                      <a href="">Wantong Duan </a> ,
-                      <a href="">Shuo Yang </a> ,
-                      <a href="https://scholar.google.com.hk/citations?hl=zh-CN&user=Q-UkdjUAAAAJ">Yue Qi </a>
-                      <br>
-                      <em>IEEE Virtual Reality (VR) 2025 -- IEEE Transactions on Visualization and Computer Graphics
-                        (TVCG) 2025 <p style='color:red'> <b>IEEE VR 2025 Best Paper Award </b> </p> </em>
-                      <br>
-                      <a href="https://ieeexplore.ieee.org/abstract/document/10916815">[Paper]</a>
-                      <a href="https://www.youtube.com/watch?v=0ZVuUjg0ck8">[Video]</a>
-                      <br>
-                    </td>
-                  </tr>
-
-
-                  <tr>
-                    <td style="padding:20px;width:30%;max-width:30%" align="center">
-                      <img style="width:100%;max-width:100%" src="images/scarf_2024.jpg" alt="dise">
-                    </td>
-                    <td width="75%" valign="center">
-                      <papertitle>SCARF: Scalable Continual Learning Framework for Memory‐efficient Multiple Neural
-                        Radiance Fields</papertitle>
-                      <br>
-                      <strong>Yuze Wang</strong>,
-                      <a href="https://junyiwang.github.io/">Junyi Wang</a>,
-                      <a href="">Chen Wang</a>,
-                      <a href="">Wantong Duan </a> ,
-                      <a href="http://cise.sdust.edu.cn/home/Page/teacher_detail/catId/31/id/503.html">Yongtang Bao </a>
-                      ,
-                      <a href="https://scholar.google.com.hk/citations?hl=zh-CN&user=Q-UkdjUAAAAJ">Yue Qi </a>
-                      <br>
-                      <em>Pacific Graphics (PG) 2024 -- Computer Graphics Forum (CGF) 2024 </em>
-                      <br>
-                      <a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/cgf.15255">[Paper]</a>
-                      <br>
-                    </td>
-                  </tr>
-
-
-                  <tr>
-                    <td style="padding:20px;width:30%;max-width:30%" align="center">
-                      <img style="width:100%;max-width:100%" src="images/sgnerf2.png" alt="dise">
-                    </td>
-                    <td width="75%" valign="center">
-                      <papertitle>SG-NeRF: Semantic-guided Point-based Neural Radiance Fields</papertitle>
-                      <br>
-                      <a href="https://quyans.github.io/">Yansong Qu*</a>,
-                      <strong>Yuze Wang*</strong>,
-                      <a href="https://scholar.google.com.hk/citations?hl=zh-CN&user=Q-UkdjUAAAAJ">Yue Qi </a>
-                      <br>
-                      <em>ICME, 2023</em>
-                      <br>
-                      <a href="https://ieeexplore.ieee.org/abstract/document/10219715">[Paper]</a>
-                      <a href="https://github.com/Quyans/SG-NeRF">[Code]</a>
-                      <br>
-                      <!-- <p> Neural Radiance Fields (NeRF) require a large number of high-quality images to achieve novel view synthesis in room-scale scenes, but capturing these images is very labor-intensive. To address this, we propose Semantic-Guided Point-Based NeRF (SG-NeRF), which can reconstruct the radiance field using only a few images. We leverage sparse 3D point clouds with neural features as geometry constraints for NeRF optimization and use semantic predictions from both 2D images and 3D point clouds to guide the search for neighboring neural points during ray marching. This semantic guidance allows the sampled points to accurately find structurally related points even in large areas with unevenly distributed sparse point clouds, enabling high-quality rendering with fewer input images. </p> -->
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td style="padding:20px;width:30%;max-width:30%" align="center">
-                      <img style="width:100%;max-width:100%" src="images/ripnerf_2023.gif" alt="dise">
-                    </td>
-                    <td width="75%" valign="center">
-                      <papertitle>RIP-NeRF: Learning Rotation-Invariant Point-based Neural
-                        Radiance Field for Fine-grained Editing and Compositing</papertitle>
-                      <br>
-                      <strong>Yuze Wang</strong>,
-                      <a href="https://junyiwang.github.io/">Junyi Wang</a>,
-                      <a href="https://quyans.github.io/">Yansong Qu</a>,
-                      <a href="https://scholar.google.com.hk/citations?hl=zh-CN&user=Q-UkdjUAAAAJ">Yue Qi </a>
-                      <br>
-                      <em>ICMR, 2023</em>
-                      <br>
-                      <a href="https://dl.acm.org/doi/abs/10.1145/3591106.3592276">[Paper]</a>
-                      <a href="https://github.com/yuzewang1998/RISE-Editing">[Code]</a>
-                      <br>
-                      <!-- <p>In this work, we introduce Rotation-Invariant Point-based NeRF (RIP-NeRF), combining the strengths of implicit NeRF-based and explicit point-based representations for fine-grained editing and cross-scene compositing of radiance fields. We replace the traditional Cartesian coordinates with a novel rotation-invariant point-based radiance field representation, using a Neural Inverse Distance Weighting Interpolation (NIDWI) module to enhance rendering quality. For cross-scene compositing, we disentangle the rendering module from the neural point-based representation, allowing controllable compositing across scenes without the need for retraining.</p> -->
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td style="padding:20px;width:30%;max-width:30%" align="center">
-                      <img style="width:100%;max-width:100%" src="images/ieee_sensors_2019.jpg" alt="dise">
-                    </td>
-                    <td width="75%" valign="center">
-                      <papertitle>An information entropy-based method of evidential source separation and refusion
-                      </papertitle>
-                      <br>
-                      <strong>Yuze Wang</strong>,
-                      <a href="">Jindong Zhang</a>,
-                      <a href="">Jiale Qiao</a>
-                      <br>
-                      <em>IEEE Sensors Journal 2020 </em>
-                      <br>
-                      <a href="https://ieeexplore.ieee.org/abstract/document/8832186">[Paper]</a>
-                      <br>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td style="padding:20px;width:30%;max-width:30%" align="center">
-                      <img style="width:100%;max-width:100%" src="images/soft_computing_2020.jpg" alt="dise">
-                    </td>
-                    <td width="75%" valign="center">
-                      <papertitle>An improved multi-sensor D–S rule for conflict reassignment of failure rate of set
-                      </papertitle>
-                      <br>
-                      <a href="">Jiale Qiao</a>,
-                      <a href="">Jindong Zhang</a>,
-                      <strong>Yuze Wang</strong>
-                      <br>
-                      <em>Soft Computing 2019</em>
-                      <br>
-                      <a href="https://link.springer.com/article/10.1007/s00500-020-05298-5">[Paper]</a>
-                      <br>
-                    </td>
-                  </tr>
-
-
-                </tbody>
-              </table>
-
-
-              <table
-                style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-                <tbody>
-                  <tr>
-                    <td style="padding:20px;width:100%;vertical-align:middle">
-                      <heading>Academic Services</heading>
-                      <p>
-                        <li style="margin: 5px;">
-                          Review for <b>IEEE TVCG</b>, <b>IEEE TMM</b>, <b>IEEE VR 2024, 2025, 2026</b>, <b>CHI 2025</b>, <b>IEEE ISMAR
-                            2025</b>, <b>Pacific Vis (TVCG Track) 2025</b>, etc.
-                        </li>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-
-              <!--
-      <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-        <tr>
-        <td style="padding:20px;width:100%;vertical-align:middle">
-          <heading>Honors and Awards</heading>
-          <p>
-             <li style="margin: 5px;"> <b>Beihang University First-Class Scholarship (Top 5% in 2024)</b></li>
-          </p>
-        </td>
-      </tr>
-    </tbody></table>
-   -->
-              <table
-                style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-                <tbody>
-                  <tr>
-                    <td style="padding:0px">
-                      <br>
-                      <p style="text-align:right;font-size:small;">
-                        <a href="https://quyans.github.io/">Website Template</a>
-                      </p>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-        </td>
-      </tr>
-  </table>
-
-  <p>
-    <center>
-      <div id="clustrmaps-widget" style="width:10%">
-        <script type="text/javascript" id="clustrmaps"
-          src="//clustrmaps.com/map_v2.js?d=pQlgj-atr-4jJJMpbbHZZ2pWohNtjpcXZPimllfH6ZY&cl=ffffff&w=a"></script>
-        <br>
-        <p>&copy; Yuze Wang</p>
-        <p>Last updated: 24, Jan, 2025</p>
-    </center>
-  </p>
+  <footer>
+    <p>© Yuze Wang · Last updated: <time datetime="2026-09-07">7 September 2026</time></p>
+    <p>Based on the <a href="https://quyans.github.io/">website template by Yansong Qu</a>.</p>
+    <div id="clustrmaps-widget">
+      <script async id="clustrmaps" src="https://clustrmaps.com/map_v2.js?d=pQlgj-atr-4jJJMpbbHZZ2pWohNtjpcXZPimllfH6ZY&amp;cl=ffffff&amp;w=a"></script>
+    </div>
+  </footer>
 </body>
-
 </html>
